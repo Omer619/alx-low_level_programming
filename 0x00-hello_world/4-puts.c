@@ -11,7 +11,7 @@ uth: Brennan D Baraban <375@holbertonschool.com>
   *      */
  int main(void)
 {
-		puts("\"Programming is like building a multilingual puzzle");
-
+		printf("Programming is like building a multilingual puzzle \n");
+i
 			return (0);
 }
