@@ -19,7 +19,6 @@ int main(void)
 /*
  * Return - that return the final output
  *
- * 
  */
 	return (0);
 }
