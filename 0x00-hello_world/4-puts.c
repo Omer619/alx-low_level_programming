@@ -9,9 +9,9 @@ uth: Brennan D Baraban <375@holbertonschool.com>
   *    *
   *     * Return: Always 0.
   *      */
- int main(void)
+     int main (void)
 {
 		printf("Programming is like building a multilingual puzzle \n");
-i
+
 			return (0);
 }
