@@ -14,7 +14,7 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	if (n > 5)
-		printf("and is grater thant 5\n");
+		printf("and is grater than 5\n");
 	else if (n == 0)
 		printf("and is 0\n");
 	else if (n < 6 && n != 0)
