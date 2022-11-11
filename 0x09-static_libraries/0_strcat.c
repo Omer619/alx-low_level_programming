@@ -1,17 +1,32 @@
 #include "main.h"
+
 /**
- * _memset - fills memory with a constant byte
- * @s: pointer to memory area 's'
- * @b: constant byte to fill
- * @n: number of bytes to fill
- * Return: pointer to memory area 's'
+ * *_strcat - function commute srtings
+ * @dest: param pointer to a char
+ * @src: param pointer to a char
+ * Return: return value of dest
  */
 
-char *_memset(char *s, char b, unsigned int n)
+char *_strcat(char *dest, char *src)
 {
-	unsigned int i;
+int i;
+int j;
 
-	for (i = 0; i < n; i++)
-		s[i] = b;
-	return (s);
+i = 0;
+j = 0;
+
+while (dest[i] != '\0')
+{
+i++;
+}
+
+while (src[j] != '\0')
+{
+dest[i] = src[j];
+j++;
+i++;
+}
+
+dest[i] = '\0';
+return (dest);
 }
