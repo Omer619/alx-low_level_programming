@@ -1,12 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
-/**
- * _strspn - gets the length of a prefix substring
- * _putchar - writes the character c to stdout
- * @c: The character to print
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
+#ifndef _FUNCTIONS_H
+#define _FUNCTIONS_H
 int _putchar(char c);
 int _islower(int c);
 int _isalpha(int c);
@@ -24,7 +17,7 @@ int _strcmp(char *s1, char *s2);
 char *_memset(char *s, char b, unsigned int n);
 char *_memcpy(char *dest, char *src, unsigned int n);
 char *_strchr(char *s, char c);
-unsigned int _strspn(char *s, char *accept)
+unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 #endif
