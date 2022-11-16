@@ -1,30 +1,49 @@
-#include "3-calc.h"
-#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
- * get_op_func - selects the correct operation toperform
- * @s: operation to perform
+ * print_opcodes - print the opcodes of this program
+ * @a: address of the main function
+ * @n: number of bytes to print
  *
- * Return: pointer to the correct function
+ * Return: void
  */
-int (*get_op_func(char *s))(int, int)
+void print_opcodes(char *a, int n)
 {
-op_t ops[] = {
-{"+", op_add},
-{"-", op_sub},
-{"*", op_mul},
-{"/", op_div},
-{"%", op_mod},
-{NULL, NULL}
-};
 int i;
 
-i = 0;
-while (ops[i].op != NULL)
+for (i = 0; i < n; i++)
 {
-if (strcmp(s, ops[i].op) == 0)
-break;
-i++;
+printf("%.2hhx", a[i]);
+if (i < n - 1)
+printf(" ");
 }
-return (ops[i].f);
+printf("\n");
+
+}
+
+/**
+ * main - prints the opcodes of its own main function
+ * @argc: number of arguments passed to the function
+ * @argv: array of pointers to arguments
+ *
+ * Return: always O
+ */
+int main(int argc, char **argv)
+{
+int n;
+
+if (argc != 2)
+{
+printf("Error\n");
+exit(1);
+}
+n = atoi(argv[1]);
+if (n < 0)
+{
+printf("Error\n");
+exit(2);
+}
+print_opcodes((char *)&main, n);
+return (0);
 }
