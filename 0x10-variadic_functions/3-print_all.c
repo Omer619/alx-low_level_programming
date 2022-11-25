@@ -47,7 +47,7 @@ printf("%d", va_arg(i, int));
  */
 void print_f(va_list f)
 {
-  printf("%f", va_arg(f, double));
+	printf("%f", va_arg(f, double));
 }
 
 /**
